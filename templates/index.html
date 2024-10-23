@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminarios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+    <h1>Listado de Inscritos</h1>
+    <a href="{{ url_for('nuevo') }}">Nuevo</a>
+    <br><br>
+    <table border = "1">
+        <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Turno</th>
+            <th>Seminarios</th>
+            <th style="color: #0d0642;">oper</th>
+            <th></th>
+        </tr>
+        {% for inscrito in inscritos %}
+        <tr>
+            <td>{{ inscrito.id }}</td>
+            <td>{{ inscrito.fecha }}</td>
+            <td>{{ inscrito.nombre }}</td>
+            <td>{{ inscrito.apellidos }}</td>
+            <td>{{ inscrito.turno }}</td>
+            <td>
+                {% for seminario in inscrito.seminarios %}
+                    {{ seminario }}
+                    {% if not loop.last %}
+                        ;
+                    {% endif %}
+                {% endfor %}
+            </td>
+            <td> <a href="{{ url_for('editar', id = inscrito.id) }}">Editar</a></td>
+            <td>
+                <form action="{{ url_for('eliminar', id = inscrito.id) }}" method="POST">
+                    <div class="bton">
+                        <input type="submit" value="eliminar">
+                    </div>    
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

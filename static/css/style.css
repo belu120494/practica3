@@ -1,0 +1,97 @@
+/* Estilos generales */
+body {
+    font-family: "Comic Sans MS";
+    color: #fff;
+    background: #0d0642;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+body h1 {
+    font-size: 3em;
+  }
+.bton {
+    text-align: center;
+}
+/* Estilos para el formulario */
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0d0642;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Estilos para los títulos */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los párrafos */
+table {
+    text-align: center;
+}
+
+th {
+    padding: 30px;
+}
+
+/* Estilos para las etiquetas */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los inputs */
+input[type="text"],
+input[type="date"]
+{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"]
+{
+    margin: 15px;
+}
+
+/* Estilos para los radios */
+input[type="radio"] {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5
+}
+
+/* Estilos para los botones */
+.bton input[type="submit"] {
+    background-color: #59dcdc;
+    color: #111;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #ee60cb;
+    text-decoration: none;
+    padding: 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    form {
+        padding: 10px;
+    }
+}
